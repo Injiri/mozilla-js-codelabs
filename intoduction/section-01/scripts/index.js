@@ -1,4 +1,3 @@
-
 //variable declaration with let
 let studentName = "Sammy Njoroge";
 let age = 45;
@@ -24,7 +23,7 @@ console.log("=================================================================")
 
 console.log("Arrays");
 //Arrays
-let revenue_USD = [123,45,100,45,78];
+let revenue_USD = [123, 45, 100, 45, 78];
 
 console.log("Revenue IN USE");
 console.log(revenue_USD);
@@ -87,46 +86,103 @@ let day = "Monday";
 let year = 2020;
 let month = 11;
 
-if(day === "Monday"){
-  console.log("if-day is Monday....");
-}else if(day !== Monday){
-  console.log("else-if-day !== Monday....");
+if (day === "Monday") {
+    console.log("if-day is Monday....");
+} else if (day !== Monday) {
+    console.log("else-if-day !== Monday....");
 } else {
-  console.log("Else block");
+    console.log("Else block");
 }
 
 console.log("=================================================================");
 console.log("Functions# func multiply(a,b)");
 
-function multiply(a,b){
-  return a * b;
+function multiply(a, b) {
+    return a * b;
 }
 
-console.log(multiply(2,2));
-console.log(multiply(2,4));
-console.log(multiply(2,6));
-console.log(multiply(2,8));
-console.log(multiply(2,10));
+console.log(multiply(2, 2));
+console.log(multiply(2, 4));
+console.log(multiply(2, 6));
+console.log(multiply(2, 8));
+console.log(multiply(2, 10));
 
 console.log("=================================================================");
 console.log("Events#OnClick");
 
 let refreshButton = document.getElementById("refresh_btn");
 
-refreshButton.onclick = function(){
-  alert("Confirm refresh!");
+refreshButton.onclick = function() {
+    alert("Confirm refresh!");
 }
 
 let productImage = document.getElementById("product-img");
 
-productImage.onclick = function(){
-  let imgSrc = productImage.getAttribute('src');
-  console.log("onclick imageSrc = " + imgSrc);
-  if(imgSrc === "images/img-a.png"){
-    console.log("Setting property b");
-    productImage.setAttribute('src', 'images/img-b.jpg');
-  } else {
-    console.log("Setting property a");
-    productImage.setAttribute('src', 'images/img-a.png');
-  }
+productImage.onclick = function() {
+    let imgSrc = productImage.getAttribute('src');
+    console.log("onclick imageSrc = " + imgSrc);
+    if (imgSrc === "images/img-a.png") {
+        console.log("Setting property b");
+        productImage.setAttribute('src', 'images/img-b.jpg');
+    } else {
+        console.log("Setting property a");
+        productImage.setAttribute('src', 'images/img-a.png');
+    }
 }
+
+console.log("=================================================================");
+console.log("ConvertNumbers");
+
+let number = "254";
+
+let actualNumber = parseInt(number);
+
+console.log("Parsed Number " + actualNumber);
+
+console.log("=================================================================");
+console.log("Javascript Objects");
+
+let user = { name: 'Joel', age: 21, location: 'Kazabuni', Password: 'pass***wd', email: 'user***@gmail.com' };
+
+console.log(user);
+
+user.name = 'Joel Osero';
+
+console.log(user);
+
+
+console.log("=================================================================");
+console.log("Switch-Case Statements");
+
+let ageInput = document.getElementById('age');
+let submitAgeBtn = document.getElementById('submit_age');
+let messageLabel = document.getElementById('age_check_msg');
+
+messageLabel.textContent = "Enter age to get elvaluation report.";
+
+submitAgeBtn.onclick = function() {
+
+    let enteredAge = parseInt(ageInput.value);
+
+    switch (enteredAge) {
+        case 18:
+            console.log("Age is exactly 18");
+            messageLabel.textContent = 'Age is exactly 18';
+            break;
+        case 21:
+            console.log("Age is exactly 21");
+            messageLabel.textContent = 'Age is exactly 21';
+        default:
+            messageLabel.textContent = 'Variable age entered as ' + enteredAge;
+            console.log("Variable age entered as " + enteredAge);
+            break;
+
+    }
+}
+
+console.log("=================================================================");
+console.log("Exception Handling");
+
+console.log("Throw Exception");
+
+throw 'Too much traffic Error';
