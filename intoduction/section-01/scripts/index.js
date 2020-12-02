@@ -181,7 +181,7 @@ submitAgeBtn.onclick = function() {
 }
 
 console.log("=================================================================");
-console.log("Arrays#ForEach");
+console.log("Arrays#IndexedCollections");
 let uuids = ['uuid1', 'uuid2', 'uuid3', 'uuid4', 'uuid5'];
 
 uuids.forEach(function(uuid) {
@@ -192,6 +192,31 @@ uuids.forEach(function(uuid) {
     ul.appendChild(li);
 });
 
+console.log("=================================================================");
+console.log("Maps#KeyedCollections");
+
+let iphoneReleases = new Map();
+
+iphoneReleases.set('2007', 'iPhone 1 ');
+iphoneReleases.set('2008', 'iPhone 2');
+iphoneReleases.set('2009', 'iPhone 3');
+iphoneReleases.set('2010', 'iPhone 4');
+iphoneReleases.set('2011', 'iPhone 5');
+iphoneReleases.set('2012', 'iPhone 6');
+iphoneReleases.set('2013', 'iPhone 7');
+iphoneReleases.set('2014', 'iPhone 8');
+iphoneReleases.set('2015', 'iPhone 9');
+iphoneReleases.set('2016', 'iPhone 10');
+
+let _2016Release = iphoneReleases.get('2015');
+
+console.log('2016 release ' + _2016Release);
+
+
+console.log('|  Year |  Version   | ');
+for (let [key, value] of iphoneReleases) {
+    console.log('|  ' + key + ' |   ' + value + '   |');
+}
 console.log("=================================================================");
 console.log("Exception Handling");
 
