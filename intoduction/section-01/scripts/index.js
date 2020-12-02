@@ -181,8 +181,21 @@ submitAgeBtn.onclick = function() {
 }
 
 console.log("=================================================================");
+console.log("Arrays#ForEach");
+let uuids = ['uuid1', 'uuid2', 'uuid3', 'uuid4', 'uuid5'];
+
+uuids.forEach(function(uuid) {
+    console.log('individual uuid ' + uuid);
+    let ul = document.getElementById('uuids');
+    let li = document.createElement('li');
+    li.appendChild(document.createTextNode(uuid));
+    ul.appendChild(li);
+});
+
+console.log("=================================================================");
 console.log("Exception Handling");
 
 console.log("Throw Exception");
 
+throw 'Too much traffic Error';
 throw 'Too much traffic Error';
