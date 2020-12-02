@@ -217,6 +217,29 @@ console.log('|  Year |  Version   | ');
 for (let [key, value] of iphoneReleases) {
     console.log('|  ' + key + ' |   ' + value + '   |');
 }
+
+console.log("=================================================================");
+console.log("Sets#Collections");
+let windowsReleases = new Set();
+windowsReleases.add('Widows 1.0 1985');
+windowsReleases.add('Widows 2.0 1987');
+windowsReleases.add('Widows 3.0 1990');
+windowsReleases.add('Widows 95 1995');
+windowsReleases.add('Widows NT 4.0 1996');
+windowsReleases.add('Widows 98 1998');
+windowsReleases.add('Widows 2000 1999');
+windowsReleases.add('Widows ME 2000');
+windowsReleases.add('Widows XP 2001');
+windowsReleases.add('Widows Vista 2006');
+windowsReleases.add('Widows 7 2009');
+windowsReleases.add('Widows 8 2012');
+windowsReleases.add('Widows 10 2015');
+
+console.log('windows: releases | ' + windowsReleases.size);
+for (let release of windowsReleases) {
+    console.log(release);
+}
+
 console.log("=================================================================");
 console.log("Exception Handling");
 
