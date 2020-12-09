@@ -1,0 +1,20 @@
+{
+    "name": "owino-jquery-lab",
+    "version": "1.0.0",
+    "description": "JQuery practice code for core jquery concepts",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "JQuery"
+    ],
+    "author": "Samuel Owiono",
+    "license": "MIT",
+    "dependencies": {
+        "jquery": "^3.5.1"
+    },
+    "devDependencies": {
+        "watchify": "^3.11.1"
+    }
+}
