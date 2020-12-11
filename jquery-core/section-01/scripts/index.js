@@ -70,4 +70,19 @@ $(function() {
     let childrenCount = counterDiv.length;
     console.log('Div children ' + childrenCount);
 
+    let htm = $('.counter').html();
+
+    console.log(htm);
+
+    $(function() {
+        addProductListing('Nike Air', 34, 'Red');
+        addProductListing('Nike Red Octobers', 4, 'Red');
+        addProductListing('Nike Watch Branded', 304, 'Black');
+        addProductListing('Nike Belt', 400, 'Yellow');
+    });
+
 });
+
+function addProductListing(productName, count, color) {
+    $('.counter').append('<div><h2 class="product__name">' + productName + '</h2> <h2 class="product__color">' + color + '</h2></div > <p><span> Orders: </span><h1 id="orders_count"> ' + count + ' </h1><button id="add_order_btn"> + </button><button id="deduct_order_btn"> - </button></p>');
+}
