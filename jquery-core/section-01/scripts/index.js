@@ -83,6 +83,54 @@ $(function() {
 
 });
 
+
+let spanSubChildParent = $('span.subchild').parent();
+spanSubChildParent.append('<div"><p>spanSubChildParent</p></div>');
+
+// Selecting an element's direct parent:
+
+// returns [ div.child ]
+$("span.subchild").parent();
+
+// Selecting all the parents of an element that match a given selector:
+
+// returns [ div.parent ]
+$("span.subchild").parents("div.parent");
+
+// returns [ div.child, div.parent, div.grandparent ]
+$("span.subchild").parents();
+
+// Selecting all the parents of an element up to, but *not including* the selector:
+
+// returns [ div.child, div.parent ]
+$("span.subchild").parentsUntil("div.grandparent");
+
+// Selecting the closest parent, note that only one parent will be selected
+// and that the initial element itself is included in the search:
+
+// returns [ div.child ]
+$("span.subchild").closest("div");
+
+// returns [ div.child ] as the selector is also included in the search:
+$("div.child").closest("div");
+
+// Selecting an element's direct children:
+
+// returns [ div.parent, div.surrogateParent1, div.surrogateParent2 ]
+$("div.grandparent").children("div");
+
+// Finding all elements within a selection that match the selector:
+
+// returns [ div.child, div.parent, div.surrogateParent1, div.surrogateParent2 ]
+$("div.grandparent").find("div");
+
+//=======================================================================
+//  CSS STYLING & DIMENSIONS
+//=======================================================================
+
+$('h3').addClass('page__title');
+
 function addProductListing(productName, count, color) {
     $('.counter').append('<div><h2 class="product__name">' + productName + '</h2> <h2 class="product__color">' + color + '</h2></div > <p><span> Orders: </span><h1 id="orders_count"> ' + count + ' </h1><button id="add_order_btn"> + </button><button id="deduct_order_btn"> - </button></p>');
+    $('h2').addClass('product__header');
 }
