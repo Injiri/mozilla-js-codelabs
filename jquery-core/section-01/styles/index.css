@@ -16,3 +16,8 @@ a.afterClick {
     color: blue;
     font-weight: bold;
 }
+
+.brand_image {
+    width: 250px;
+    height: 250px;
+}

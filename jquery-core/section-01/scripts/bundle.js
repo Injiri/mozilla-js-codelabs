@@ -11009,4 +11009,20 @@ function addProductListing(productName, count, color) {
     $('.counter').append('<div><h2 class="product__name">' + productName + '</h2> <h2 class="product__color">' + color + '</h2></div > <p><span> Orders: </span><h1 id="orders_count"> ' + count + ' </h1><button id="add_order_btn"> + </button><button id="deduct_order_btn"> - </button></p>');
     $('h2').addClass('product__header');
 }
+
+//=======================================================================
+//              jQuery Event Basics
+//=======================================================================
+
+$(function() {
+    $('#amazon_button').on('click', function() {
+        console.log('loading amazon site ...');
+        window.open('https://www.amazon.com/', 'Amazone');
+    });
+
+    $('#more_options').on('click', function() {
+        $('#more_options').append('<div id="alibaba_option"> <p>Try Alibaba Instead</p> <img class="brand_image" src="images/amazon.png"/> <button id ="amazon_button" > Go to Amazon < /button> </div > ');
+        $('#more_options').append('<div id="jumia_option"> <p>Try Jumia Instead</p> <img class = "brand_image" src="images/amazon.png" /> <button id = "amazon_button" > Go to Amazon < /button> </div > ');
+    })
+});
 },{"jquery":1}]},{},[2]);
