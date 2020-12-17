@@ -11017,12 +11017,28 @@ function addProductListing(productName, count, color) {
 $(function() {
     $('#amazon_button').on('click', function() {
         console.log('loading amazon site ...');
-        window.open('https://www.amazon.com/', 'Amazone');
+        window.open('https://www.amazon.com/', 'Amazon');
     });
 
     $('#more_options').on('click', function() {
         $('#more_options').append('<div id="alibaba_option"> <p>Try Alibaba Instead</p> <img class="brand_image" src="images/amazon.png"/> <button id ="amazon_button" > Go to Amazon < /button> </div > ');
         $('#more_options').append('<div id="jumia_option"> <p>Try Jumia Instead</p> <img class = "brand_image" src="images/amazon.png" /> <button id = "amazon_button" > Go to Amazon < /button> </div > ');
     })
+});
+
+$('body').on('mouseenter', 'img', function() {
+    $('.brand_image').attr('src', 'images/alibaba.png');
+});
+
+$('body').on('mouseleave', 'img', function() {
+    $('.brand_image').attr('src', 'images/amazon.png');
+});
+
+$('body').on('mouseenter', 'button', function() {
+    $('.brand_image').attr('src', 'images/jumia.png');
+});
+
+$('body').on('mouseleave', '#amazon_button', function() {
+    $('.brand_image').attr('src', 'images/amazon.png');
 });
 },{"jquery":1}]},{},[2]);
