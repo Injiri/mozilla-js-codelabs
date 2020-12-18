@@ -21,3 +21,23 @@ a.afterClick {
     width: 250px;
     height: 250px;
 }
+
+.box__default__color {
+    border: #000000;
+    color: red;
+}
+
+.box__green__color {
+    border: #000000;
+    color: green;
+}
+
+.box__blue__color {
+    border: #000000;
+    color: blue;
+}
+
+.box__black__color {
+    border: #000000;
+    color: black;
+}

@@ -11041,4 +11041,24 @@ $('body').on('mouseenter', 'button', function() {
 $('body').on('mouseleave', '#amazon_button', function() {
     $('.brand_image').attr('src', 'images/amazon.png');
 });
+
+$('#margic_box').on({
+    mouseenter: function() {
+        $(this).addClass('box__green__color');
+        $(this).removeClass('box__blue__color');
+        $(this).removeClass('box__black__color');
+    },
+
+    mouseleave: function() {
+        $(this).addClass('box__blue__color');
+        $(this).removeClass('box__green__color');
+        $(this).removeClass('box__black__color');
+    },
+
+    click: function() {
+        $(this).addClass('box__black__color');
+        $(this).removeClass('box__blue__color');
+        $(this).removeClass('box__green__color');
+    }
+})
 },{"jquery":1}]},{},[2]);
